@@ -3,7 +3,7 @@ require 'gosu_tiled'
 
 class GameWindow < Gosu::Window
   MAP_FILE = File.join(File.dirname(
-  __FILE__), 'island.json')
+    __FILE__), 'island.json')
   SPEED = 5
 
   def initialize
@@ -34,8 +34,8 @@ class GameWindow < Gosu::Window
     [Gosu::KbLeft,
      Gosu::KbRight,
      Gosu::KbUp,
-    Gosu::KbDown].each do |b|
-      return true if button_down(b)
+     Gosu::KbDown].each do |b|
+      return true if button_down?(b)
     end
     @first_render
   end
