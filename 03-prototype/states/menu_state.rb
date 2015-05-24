@@ -1,7 +1,6 @@
 require 'singleton'
-
 class MenuState < GameState
-  include singleton
+  include Singleton
   attr_accessor :play_state
 
   def initialize
@@ -51,5 +50,6 @@ class MenuState < GameState
     if id == Gosu::KbN
       @play_state = PlayState.new
       GameState.switch(@play_state)
+    end
   end
 end
